@@ -27,6 +27,9 @@ You can easily deploy this Discord webhook protector to [repl.it](https://repl.i
 3. Edit the `config.js` file as needed.
 4. Start the repl.it server and your webhook protector will be up and running!
 
+## To Do
+- [❌] Able to send both file and embed / content
+
 ## Contributing
 
 If you find any issues with this Discord webhook protector or have ideas for new features, feel free to submit a pull request or open an issue on the GitHub repository. Contributions are always welcome!
