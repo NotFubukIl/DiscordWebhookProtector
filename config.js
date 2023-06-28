@@ -1,4 +1,4 @@
 module.exports = {
-    webhook: "YOUR_WEBHOOK",
+    webhook: "",
     port: 3000
 }

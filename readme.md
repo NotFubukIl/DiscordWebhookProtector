@@ -28,7 +28,7 @@ You can easily deploy this Discord webhook protector to [repl.it](https://repl.i
 4. Start the repl.it server and your webhook protector will be up and running!
 
 ## To Do
-- [❌] Able to send both file and embed / content
+- [✅] Able to send both file and embed / content
 
 ## Contributing
 

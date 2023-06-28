@@ -8,11 +8,16 @@ module.exports = async function(req, res) {
             form.append("file" + i++, fs.createReadStream(path + "/" + r.originalname))
         });
     }
+    if (req.body) form.append("payload_json", JSON.stringify(req.body))
+    
     delete req.headers.host
+    log("Posting Request")
     var request = await fetch(webhook, {
         method: "POST",
-        headers: req.files ? form.getHeaders() : req.headers,
-        body: req.files ? form : JSON.stringify(req.body)
+        headers: {
+            ...form.getHeaders()
+        },
+        body: form 
     })
     var infos = ""
     try {
