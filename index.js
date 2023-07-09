@@ -1,3 +1,4 @@
+
 const toGlob = {
     ...require("./config"),
     log: what => {
@@ -23,6 +24,7 @@ const toGlob = {
     bodyParser: require("body-parser"),
     FormData: require("form-data"),
     fs: require("fs"),
+    expressRateLimit: require("express-rate-limit"),
     getIP: req => req.headers['x-forwarded-for'] || req.socket.remoteAddress,
     path: __dirname + "/uploads"
 }
@@ -36,6 +38,7 @@ global.upload = multer({ dest: 'uploads/' })
 global.app = express()
 
 app.use(bodyParser.json())
+app.use(expressRateLimit(rateLimit))
 app.use((req, res, next) => {
     var fileContent = fs.readFileSync("./ips.txt").toString()
     var ip = getIP(req)

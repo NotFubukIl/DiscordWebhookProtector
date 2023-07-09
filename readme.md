@@ -29,6 +29,7 @@ You can easily deploy this Discord webhook protector to [repl.it](https://repl.i
 
 ## To Do
 - [✅] Able to send both file and embed / content
+- [✅] Rate Limit
 
 ## Contributing
 
